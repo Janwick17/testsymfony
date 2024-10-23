@@ -1,0 +1,20 @@
+<table border='3'>
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>validation</td>
+
+    </tr>
+    {% for a in tabclient %}
+    <tr>
+        <td>{{a.id}}</td>
+        <td>{{a.name}}</td>
+        <td>{{a.validation}}</td>
+        <td><a href="{{ path('app_addclient', {'id': a.id}) }}">add</a></td>
+        <td><a href="{{ path('app_deleteclient', {'id': a.id}) }}">delete</a></td>
+
+
+        
+    </tr>
+    {% endfor %}
+</table>

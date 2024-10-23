@@ -1,0 +1,20 @@
+<table border='3'>
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>description</td>
+        <td>validation</td>
+
+    </tr>
+    {% for b in tabmarket %}
+    <tr>
+        <td>{{b.id}}</td>
+        <td>{{b.name}}</td>
+        <td>{{b.description}}</td>
+        <td>{{b.validation | date('Y-m-d')}}</td>
+        <td><a href="{{ path('app_modifymarket', {'id': b.id}) }}">update</a></td>
+
+
+    </tr>
+    {% endfor %}
+</table>
